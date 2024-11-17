@@ -1,4 +1,4 @@
-from flask import Blueprint, request, jsonify, current_app
+from flask import Blueprint, request, jsonify, current_app, render_template
 from werkzeug.utils import secure_filename
 import os
 from datetime import datetime
@@ -59,4 +59,4 @@ def get_products():
             "expiration_date": product.expiration_date.strftime('%Y-%m-%d'),
             "notify_date": product.notify_date.strftime('%Y-%m-%d')
         } for product in products
-    ]})
+    ]})

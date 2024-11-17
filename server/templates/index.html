@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container">
+    <h1>Welcome to Expiration Tracker</h1>
+    <p>Track your product expiration dates with ease!</p>
+    <a class="btn" href="{{ url_for('server_bp.upload') }}">Get Started</a>
+</div>
+{% endblock %}

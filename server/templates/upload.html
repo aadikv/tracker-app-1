@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container">
+    <h2>Upload Product Label</h2>
+    <form id="uploadForm" action="/api/upload" method="POST" enctype="multipart/form-data">
+        <label for="image">Upload an image:</label>
+        <input type="file" name="image" id="image" accept="image/*" required>
+        <label for="device_token">Device Token:</label>
+        <input type="text" name="device_token" id="device_token" placeholder="Enter your device token" required>
+        <button type="submit" class="btn">Submit</button>
+    </form>
+    <p id="message"></p>
+</div>
+{% endblock %}
